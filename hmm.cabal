@@ -29,5 +29,5 @@ Library
                  containers >=0.4.2 && <0.6
   Exposed-modules:
     Data.HMM
-    Data.HMMPNGS
+    HMMPNGS
 

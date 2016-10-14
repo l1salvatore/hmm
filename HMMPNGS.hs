@@ -1,4 +1,4 @@
-module Data.HMMPNGS where
+module HMMPNGS where
 
 import Data.HMM
 import Data.Word
@@ -34,9 +34,12 @@ mmpng1 = simpleMM png1 1
 				    filterMethod = 0,
 				    interlaceMethod = PngNoInterlace},-}
 
-array1 = listArray (1,4) ["PngRawImage",
+array1 = listArray (1,6) ["PngRawImage",
                           "header = PngIHdr",
                           "colourType = PngTrueColour",
-                          "interlaceMethod = PngNoInterlace"]
+                          "interlaceMethod = PngNoInterlace",
+                          "colourType = PngIndexedColor",
+                          "interlaceMethod = PngInterlaceAdam7"]
 
-mmpng2 = baumWelch mmpng1 array1
+mmpng2 = baumWelch mmpng1 array1 1
+
