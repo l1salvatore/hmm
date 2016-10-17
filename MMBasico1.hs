@@ -18,7 +18,7 @@ mmP = simpleMM elemsP 1
 genP = "AAABBBBCAAAABBCCABABBBAAA"
 
 
-toArray :: String -> Array Int Char
+toArray :: a -> Array Int a
 toArray s = listArray (1,length s) s
 
 mmPTrained = baumWelch mmP (toArray "AAABBCBBCCAAABBCAAABBC") 5
