@@ -34,12 +34,17 @@ mmpng1 = simpleMM png1 1
 				    filterMethod = 0,
 				    interlaceMethod = PngNoInterlace},-}
 
-array1 = listArray (1,6) ["PngRawImage",
+array1 = listArray (1,4) ["PngRawImage",
                           "header = PngIHdr",
                           "colourType = PngTrueColour",
-                          "interlaceMethod = PngNoInterlace",
-                          "colourType = PngIndexedColor",
-                          "interlaceMethod = PngInterlaceAdam7"]
+                          "interlaceMethod = PngNoInterlace"]
 
 mmpng2 = baumWelch mmpng1 array1 1
+
+array2 = listArray (1,4) ["PngRawImage",
+                          "header = PngIHdr",
+                          "colourType = PngIndexedColor", 
+                          "interlaceMethod = PngNoInterlace"]
+
+mmpng3 = baumWelch mmpng2 array2 0
 
