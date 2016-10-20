@@ -14,9 +14,7 @@ data PngRawImage = PngRawImage
 
 type Event = String
 
-png1 = ["PngRawImage",
-        "header = PngIHdr",
-        "colourType = PngGreyscale",
+png1 = ["colourType = PngGreyscale",
         "colourType = PngTrueColour",
         "colourType = PngIndexedColor",
         "colourType = PngGreyscaleWithAlpha",
@@ -39,7 +37,7 @@ array1 = listArray (1,4) ["PngRawImage",
                           "colourType = PngTrueColour",
                           "interlaceMethod = PngNoInterlace"]
 
-mmpng2 = baumWelch mmpng1 array1 1
+mmpng2 = baumWelch mmpng1 array1 3
 
 array2 = listArray (1,4) ["PngRawImage",
                           "header = PngIHdr",
